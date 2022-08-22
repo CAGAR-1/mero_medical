@@ -1,73 +1,60 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(demo());
+  runApp(My_App());
 }
 
-class demo extends StatelessWidget {
-  const demo({super.key});
+class My_App extends StatelessWidget {
+  const My_App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text("Demo App"),
+        body: Column(
+          children: [
+            Expanded(
+                child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    color: Colors.pink,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.red,
+                  ),
+                ),
+              ],
+            )),
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      color: Colors.purple,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      color: Colors.lightGreen,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              child: Container(
+                color: Colors.blue,
+              ),
+            ),
+          ],
         ),
-        body: Center(
-          child: Column(
-            children: [
-              Container(
-                height: 50,
-                color: Colors.red,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 50,
-                color: Colors.black,
-              ),
-              SizedBox(height: 10,),
-              Container(
-                height: 50,
-                color: Colors.red,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 50,
-                color: Colors.black,
-              ),
-              SizedBox(height: 10,),
-              Container(
-                height: 50,
-                color: Colors.red,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 50,
-                color: Colors.black,
-              ),
-              SizedBox(height: 10,),
-              Container(
-                height: 50,
-                color: Colors.red,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text("Completed",style:TextStyle(backgroundColor:Colors.blue,fontSize: 40,fontWeight: FontWeight.bold),)
-
-            ],
-          ),
-        ),drawer: Drawer(),
       ),
     );
   }
