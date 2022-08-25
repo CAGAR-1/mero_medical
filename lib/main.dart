@@ -14,48 +14,58 @@ class My_App extends StatelessWidget {
       home: Scaffold(
         body: Column(
           children: [
-            Expanded(
-                child: Row(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Expanded(
-                  child: Container(
-                    color: Colors.pink,
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    color: Colors.red,
-                  ),
-                ),
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.red,
+                )
               ],
-            )),
+            ),
             Expanded(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Expanded(
-                    child: Container(
-                      color: Colors.purple,
-                    ),
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.black,
                   ),
-                  Expanded(
-                    child: Container(
-                      color: Colors.lightGreen,
-                    ),
-                  )
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.black,
+                  ),
+                  Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.black,
+                  ),
                 ],
               ),
             ),
-            SizedBox(
-              width: 10,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.red,
+                )
+              ],
             ),
             Expanded(
               child: Container(
-                color: Colors.blue,
+                color: Colors.green,
               ),
-            ),
+            )
           ],
         ),
       ),
     );
   }
 }
+        
+
